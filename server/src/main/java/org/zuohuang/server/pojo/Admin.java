@@ -16,4 +16,5 @@ public class Admin {
     private String password;
     private Date CreateTime;
     private Date LastLoginTime;
+
 }

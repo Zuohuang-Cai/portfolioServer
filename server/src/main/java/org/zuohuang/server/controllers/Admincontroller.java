@@ -8,18 +8,18 @@ import org.zuohuang.server.service.Adminservice;
 
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/admin")
 public class Admincontroller {
     @Autowired
     private Adminservice adminservice;
 
-    @PostMapping("/admin")
+    @PostMapping("/")
     public Result Create(Admin admin) {
         adminservice.create(admin);
         return Result.success();
     }
 
-    @PutMapping("/admin")
+    @PutMapping("/")
     public Result update(@RequestBody Admin data) {
         System.out.println(data);
         System.out.println(data.getClass().getName());
