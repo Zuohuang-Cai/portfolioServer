@@ -4,10 +4,10 @@ use portfolioServer;
 create table admins
 (
     id            int auto_increment primary key,
-    username      varchar(20) unique        not null,
-    password      varchar(20)               not null,
-    CreateTime    DATE DEFAULT CURRENT_DATE not null,
-    LastLoginTime DATE DEFAULT CURRENT_DATE not null
+    username      varchar(20) unique not null,
+    password      varchar(20)        not null,
+    CreateTime    DATE DEFAULT CURRENT_DATE,
+    LastLoginTime DATE DEFAULT CURRENT_DATE
 );
 create table logs
 (
@@ -26,9 +26,18 @@ create table projects
     Foto        blob                      not null,
     Url         text                      not null
 );
+create table projectTypes
+(
+    id        int auto_increment primary key,
+    ProjectId int         not null,
+    Type      varchar(20) not null,
+    foreign key (ProjectId) references projects (id)
+);
 create table Clients
 (
     id          int auto_increment primary key,
     ip          varchar(20)               not null,
     CurrentTime DATE DEFAULT CURRENT_DATE not null
 );
+insert into admins (username, password)
+values ('admin', 'admin');

@@ -15,9 +15,7 @@ public class Logincontroller {
     private Loginservice loginservice;
 
     @PostMapping("/")
-    public Result login(@RequestBody Admin admin, HttpServletRequest request) {
-
-        request.getRemoteAddr();
+    public Result login(@RequestBody Admin admin) {
         return Result.success(loginservice.login(admin));
     }
 

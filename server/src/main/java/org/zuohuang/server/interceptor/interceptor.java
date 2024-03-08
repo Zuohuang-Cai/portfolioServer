@@ -3,12 +3,13 @@ package org.zuohuang.server.interceptor;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 import org.zuohuang.server.service.Loginservice;
-import org.zuohuang.server.service.impt.Loginimpt;
 
 @Component
 @Slf4j
@@ -16,21 +17,28 @@ public class interceptor implements HandlerInterceptor {
 
     private final Loginservice loginservice;
 
-    interceptor() {
-        this.loginservice = new Loginimpt();
+    @Autowired
+    public interceptor(Loginservice loginservice) {
+        this.loginservice = loginservice;
     }
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        System.out.println(this.loginservice);
         log.info("verify token");
         log.info("store ip");
         if (!loginservice.verify(request.getHeader("token"))) {
-            log.info("invalid token");
+            log.warn("invalid token from " + request.getRemoteAddr());
         } else {
             log.info("successful verification");
         }
-        loginservice.ip(request.getRemoteAddr());
-        log.info("ip stored");
+        try {
+            loginservice.ip(request.getRemoteAddr());
+            log.info("ip stored");
+        } catch (Exception e) {
+            log.warn("ip store failed");
+            log.error(e.getMessage());
+        }
         return loginservice.verify(request.getHeader("token"));
     }
 
@@ -40,6 +48,5 @@ public class interceptor implements HandlerInterceptor {
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-        // Completion logic
     }
 }

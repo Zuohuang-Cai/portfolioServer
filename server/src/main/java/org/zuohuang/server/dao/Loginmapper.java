@@ -17,5 +17,5 @@ public interface Loginmapper {
     Admin login(Admin admin);
 
     @Insert("insert into Clients(ip,CurrentTime) values(#{ip},#{CurrentTime})")
-    public void ip(String ip, Date CurrentTime);
+    void ip(String ip, Date CurrentTime);
 }

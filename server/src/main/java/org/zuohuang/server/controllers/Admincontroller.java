@@ -21,8 +21,6 @@ public class Admincontroller {
 
     @PutMapping("/")
     public Result update(@RequestBody Admin data) {
-        System.out.println(data);
-        System.out.println(data.getClass().getName());
         adminservice.update(data);
         return Result.success();
     }
