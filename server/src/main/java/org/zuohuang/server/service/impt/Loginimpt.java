@@ -3,7 +3,6 @@ package org.zuohuang.server.service.impt;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
-import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
@@ -18,7 +17,7 @@ import java.util.HashMap;
 @Service
 @Component
 public class Loginimpt implements Loginservice {
-    private Loginmapper loginmapper;
+    private final Loginmapper loginmapper;
 
     @Autowired
     public Loginimpt(Loginmapper loginmapper) {
