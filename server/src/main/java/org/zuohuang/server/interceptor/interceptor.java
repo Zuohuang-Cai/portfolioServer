@@ -23,12 +23,19 @@ public class interceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         log.info("verify token");
+        log.info("store ip");
+        if (!loginservice.verify(request.getHeader("token"))) {
+            log.info("invalid token");
+        } else {
+            log.info("successful verification");
+        }
+        loginservice.ip(request.getRemoteAddr());
+        log.info("ip stored");
         return loginservice.verify(request.getHeader("token"));
     }
 
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-        log.info("successful verification");
     }
 
     @Override

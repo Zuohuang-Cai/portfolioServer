@@ -52,4 +52,10 @@ public class Loginimpt implements Loginservice {
             return false;
         }
     }
+
+    @Override
+    public void ip(String ip) {
+        Date date = new Date();
+        loginmapper.ip(ip, date);
+    }
 }
