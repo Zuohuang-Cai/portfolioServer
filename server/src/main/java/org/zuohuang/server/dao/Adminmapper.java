@@ -13,5 +13,5 @@ public interface Adminmapper {
     public void create(Admin admin);
 
     @Update("update admins set LastLoginTime=#{LastLoginTime} where username=#{username}")
-    public void update(Admin admin);
+    public void updateLastLoginTime(Admin admin);
 }

@@ -19,14 +19,5 @@ public class Admincontroller {
         return Result.success();
     }
 
-    @PutMapping("/")
-    public Result update(@RequestBody Admin data) {
-        adminservice.update(data);
-        return Result.success();
-    }
 
-    @GetMapping("/verify")
-    public Result verify() {
-        return Result.success();
-    }
 }

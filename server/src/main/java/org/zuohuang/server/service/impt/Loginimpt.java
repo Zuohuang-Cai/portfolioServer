@@ -1,15 +1,18 @@
 package org.zuohuang.server.service.impt;
 
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.zuohuang.server.dao.Adminmapper;
 import org.zuohuang.server.dao.Loginmapper;
 import org.zuohuang.server.pojo.Admin;
 import org.zuohuang.server.service.Loginservice;
 
+import javax.crypto.SecretKey;
 import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
@@ -18,10 +21,14 @@ import java.util.HashMap;
 @Component
 public class Loginimpt implements Loginservice {
     private final Loginmapper loginmapper;
+    private final Adminmapper adminmapper;
+    private final Admin admin;
 
     @Autowired
-    public Loginimpt(Loginmapper loginmapper) {
+    public Loginimpt(Loginmapper loginmapper, Adminmapper adminmapper, Admin admin) {
         this.loginmapper = loginmapper;
+        this.adminmapper = adminmapper;
+        this.admin = admin;
     }
 
     @Autowired
@@ -29,7 +36,6 @@ public class Loginimpt implements Loginservice {
 
     @Override
     public String login(Admin admin) {
-        System.out.println(loginmapper);
         HashMap<String, Object> map = new HashMap<>();
         map.put("name", admin.getUsername());
         if (loginmapper.login(admin) != null) {
@@ -48,10 +54,14 @@ public class Loginimpt implements Loginservice {
             return false;
         }
         try {
-            Jwts.parser()
-                    .setSigningKey(key)
+            Claims data = Jwts.parser()
+                    .verifyWith((SecretKey) key)
                     .build()
-                    .parseSignedClaims(token);
+                    .parseSignedClaims(token)
+                    .getPayload();
+            admin.setUsername((String) data.get("name"));
+            admin.setLastLoginTime(new Date());
+            adminmapper.updateLastLoginTime(admin);
             return true;
         } catch (Exception e) {
             return false;

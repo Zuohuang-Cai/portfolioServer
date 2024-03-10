@@ -27,6 +27,6 @@ public class Adminimpt implements Adminservice {
 
     @Override
     public void update(Admin admin) {
-        adminmapper.update(admin);
+        adminmapper.updateLastLoginTime(admin);
     }
 }
