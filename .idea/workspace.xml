@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f888482d-9202-44ca-8ade-16dc7d05e66a" name="Changes" comment="login system" />
+    <list default="true" id="f888482d-9202-44ca-8ade-16dc7d05e66a" name="Changes" comment="login system">
+      <change afterPath="$PROJECT_DIR$/server/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +41,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.demo [deploy].executor": "Run",
+    "Maven.demo [package].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -106,7 +111,7 @@
       <workItem from="1709886343087" duration="15841000" />
       <workItem from="1709925692379" duration="10310000" />
       <workItem from="1709988238080" duration="988000" />
-      <workItem from="1710078998321" duration="10034000" />
+      <workItem from="1710078998321" duration="12441000" />
     </task>
     <task id="LOCAL-00001" summary="admin apis">
       <option name="closed" value="true" />
@@ -164,7 +169,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710089671003</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="login system">
+      <option name="closed" value="true" />
+      <created>1710091646593</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1710091646593</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
