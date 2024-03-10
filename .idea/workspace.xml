@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f888482d-9202-44ca-8ade-16dc7d05e66a" name="Changes" comment="add basic aop for logs">
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1dc26a4a-a194-44e7-a635-f62bb517ddee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1dc26a4a-a194-44e7-a635-f62bb517ddee.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Admincontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Admincontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Logincontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Logincontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Projectcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Projectcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/dao/Adminmapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/dao/Adminmapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/dao/Loginmapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/dao/Loginmapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/Adminimpt.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/Adminimpt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/Loginimpt.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/Loginimpt.java" afterDir="false" />
-    </list>
+    <list default="true" id="f888482d-9202-44ca-8ade-16dc7d05e66a" name="Changes" comment="login system" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +106,7 @@
       <workItem from="1709886343087" duration="15841000" />
       <workItem from="1709925692379" duration="10310000" />
       <workItem from="1709988238080" duration="988000" />
-      <workItem from="1710078998321" duration="9554000" />
+      <workItem from="1710078998321" duration="10034000" />
     </task>
     <task id="LOCAL-00001" summary="admin apis">
       <option name="closed" value="true" />
@@ -168,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709936796650</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="login system">
+      <option name="closed" value="true" />
+      <created>1710089671003</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710089671003</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +175,8 @@
     <MESSAGE value="add interceptor" />
     <MESSAGE value="ip catcher" />
     <MESSAGE value="add basic aop for logs" />
-    <option name="LAST_COMMIT_MESSAGE" value="add basic aop for logs" />
+    <MESSAGE value="login system" />
+    <option name="LAST_COMMIT_MESSAGE" value="login system" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
