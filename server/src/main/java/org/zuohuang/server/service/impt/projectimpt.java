@@ -8,14 +8,15 @@ import org.springframework.transaction.annotation.Transactional;
 import org.zuohuang.server.mapper.Projectmapper;
 import org.zuohuang.server.pojo.DTO.Project;
 import org.zuohuang.server.pojo.DTO.Result;
-import org.zuohuang.server.service.Projectservice;
 
+import java.sql.Blob;
+import java.sql.SQLException;
 import java.util.List;
 
 @Service
 @Slf4j
 @Component
-public class projectimpt implements Projectservice {
+public class projectimpt implements org.zuohuang.server.service.Projectservice {
     private final Projectmapper projectmapper;
 
     @Autowired
@@ -52,8 +53,10 @@ public class projectimpt implements Projectservice {
     }
 
     @Override
-    public void foto(int id) {
-        projectmapper.foto(id);
+    public void foto(int id) throws SQLException {
+
+
+        System.out.println(projectmapper.foto(id).size());
     }
 
     @Override

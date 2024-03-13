@@ -6,6 +6,8 @@ import org.zuohuang.server.pojo.DTO.Project;
 import org.zuohuang.server.pojo.DTO.Result;
 import org.zuohuang.server.service.Projectservice;
 
+import java.sql.SQLException;
+
 @RestController
 @RequestMapping("/project")
 public class Projectcontroller {
@@ -43,7 +45,7 @@ public class Projectcontroller {
         return Result.success("success deleted by id " + id);
     }
     @GetMapping("/foto")
-    public void foto(int id) {
+    public void foto(int id)throws SQLException {
         projectService.foto(id);
     }
 }

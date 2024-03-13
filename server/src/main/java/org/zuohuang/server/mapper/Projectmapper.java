@@ -4,6 +4,8 @@ import org.apache.ibatis.annotations.*;
 import org.zuohuang.server.pojo.DTO.Project;
 import org.zuohuang.server.pojo.DTO.Result;
 
+import java.sql.Blob;
+import java.sql.SQLException;
 import java.util.List;
 
 @Mapper
@@ -28,5 +30,5 @@ public interface Projectmapper {
     void deleteTags(int id);
 
     @Select("select Foto from projects where id=#{id}")
-    void foto(int id);
+    List<Byte> foto(int id) throws SQLException;
 }
