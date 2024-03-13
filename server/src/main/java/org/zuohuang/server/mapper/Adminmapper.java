@@ -1,10 +1,10 @@
-package org.zuohuang.server.dao;
+package org.zuohuang.server.mapper;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Component;
-import org.zuohuang.server.pojo.Admin;
+import org.zuohuang.server.pojo.DTO.Admin;
 
 @Component
 @Mapper

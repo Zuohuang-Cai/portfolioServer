@@ -24,7 +24,6 @@ public class interceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println(this.loginservice);
         log.info("verify token");
         log.info("store ip");
         if (!loginservice.verify(request.getHeader("token"))) {

@@ -1,6 +1,6 @@
 package org.zuohuang.server.service;
 
-import org.zuohuang.server.pojo.Admin;
+import org.zuohuang.server.pojo.DTO.Admin;
 
 public interface Loginservice {
     String login(Admin admin);

@@ -2,7 +2,7 @@ package org.zuohuang.server.exception;
 
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.zuohuang.server.pojo.Result;
+import org.zuohuang.server.pojo.DTO.Result;
 
 @RestControllerAdvice
 public class Exceptionmanager {

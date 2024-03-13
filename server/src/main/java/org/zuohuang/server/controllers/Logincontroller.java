@@ -3,11 +3,10 @@ package org.zuohuang.server.controllers;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
-import lombok.extern.slf4j.XSlf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.zuohuang.server.pojo.Admin;
-import org.zuohuang.server.pojo.Result;
+import org.zuohuang.server.pojo.DTO.Admin;
+import org.zuohuang.server.pojo.DTO.Result;
 import org.zuohuang.server.service.Loginservice;
 
 @RestController

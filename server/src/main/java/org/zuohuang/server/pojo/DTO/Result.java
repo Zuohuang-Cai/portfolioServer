@@ -1,4 +1,4 @@
-package org.zuohuang.server.pojo;
+package org.zuohuang.server.pojo.DTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

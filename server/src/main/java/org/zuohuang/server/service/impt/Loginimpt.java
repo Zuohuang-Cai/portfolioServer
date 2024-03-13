@@ -7,9 +7,9 @@ import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-import org.zuohuang.server.dao.Adminmapper;
-import org.zuohuang.server.dao.Loginmapper;
-import org.zuohuang.server.pojo.Admin;
+import org.zuohuang.server.mapper.Adminmapper;
+import org.zuohuang.server.mapper.Loginmapper;
+import org.zuohuang.server.pojo.DTO.Admin;
 import org.zuohuang.server.service.Loginservice;
 
 import javax.crypto.SecretKey;
@@ -70,7 +70,6 @@ public class Loginimpt implements Loginservice {
 
     @Override
     public void ip(String ip) {
-        System.out.println(loginmapper);
         Date date = new Date();
         loginmapper.ip(ip, date);
     }

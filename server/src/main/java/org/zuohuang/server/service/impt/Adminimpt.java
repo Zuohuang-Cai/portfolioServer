@@ -6,8 +6,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-import org.zuohuang.server.dao.Adminmapper;
-import org.zuohuang.server.pojo.Admin;
+import org.zuohuang.server.mapper.Adminmapper;
+import org.zuohuang.server.pojo.DTO.Admin;
 import org.zuohuang.server.service.Adminservice;
 
 

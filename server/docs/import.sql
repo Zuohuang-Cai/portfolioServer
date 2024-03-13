@@ -20,17 +20,17 @@ create table logs
 create table projects
 (
     id          int auto_increment primary key,
-    title       varchar(50)               not null,
-    description text                      not null,
-    CreateTime  DATE DEFAULT CURRENT_DATE not null,
-    Foto        blob                      not null,
-    Url         text                      not null
+    title       varchar(50) not null,
+    description text        not null,
+    CreateTime  DATE DEFAULT CURRENT_DATE,
+    Foto        blob        not null,
+    Url         text        not null
 );
-create table projectTypes
+create table projectTags
 (
     id        int auto_increment primary key,
     ProjectId int         not null,
-    Type      varchar(20) not null,
+    Tag       varchar(20) not null,
     foreign key (ProjectId) references projects (id)
 );
 create table Clients
