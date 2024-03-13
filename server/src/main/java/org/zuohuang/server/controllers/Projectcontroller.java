@@ -42,4 +42,8 @@ public class Projectcontroller {
         projectService.Delete(id);
         return Result.success("success deleted by id " + id);
     }
+    @GetMapping("/foto")
+    public void foto(int id) {
+        projectService.foto(id);
+    }
 }

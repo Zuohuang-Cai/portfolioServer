@@ -50,4 +50,14 @@ public class projectimpt implements Projectservice {
         projectmapper.deleteProject(id);
         log.info("deleted project by id " + id);
     }
+
+    @Override
+    public void foto(int id) {
+        projectmapper.foto(id);
+    }
+
+    @Override
+    public void update(Project project) {
+
+    }
 }

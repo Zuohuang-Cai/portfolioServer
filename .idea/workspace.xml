@@ -5,10 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f888482d-9202-44ca-8ade-16dc7d05e66a" name="Changes" comment="basic project feature">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1dc26a4a-a194-44e7-a635-f62bb517ddee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1dc26a4a-a194-44e7-a635-f62bb517ddee.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Projectcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Projectcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/exception/Exceptionmanager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/exception/Exceptionmanager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/mapper/Projectmapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/mapper/Projectmapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/Projectservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/Projectservice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/projectimpt.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/projectimpt.java" afterDir="false" />
@@ -125,7 +121,7 @@
       <workItem from="1710078998321" duration="13736000" />
       <workItem from="1710097498487" duration="649000" />
       <workItem from="1710318730604" duration="1868000" />
-      <workItem from="1710320722004" duration="7665000" />
+      <workItem from="1710320722004" duration="8160000" />
     </task>
     <task id="LOCAL-00001" summary="admin apis">
       <option name="closed" value="true" />
@@ -215,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710327209566</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="basic project feature">
+      <option name="closed" value="true" />
+      <created>1710329103549</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1710329103549</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

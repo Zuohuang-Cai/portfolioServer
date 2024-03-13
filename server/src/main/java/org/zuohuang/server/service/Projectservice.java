@@ -11,4 +11,8 @@ public interface Projectservice {
     Project read(int id);
 
     void Delete(int id);
+
+    void foto(int id);
+
+    void update(Project project);
 }

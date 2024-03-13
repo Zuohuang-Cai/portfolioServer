@@ -15,10 +15,10 @@ public interface Projectmapper {
     @Insert("insert into projectTags(ProjectId, Tag) values(#{id},#{Tag})")
     void addTags(Project project);
 
-    @Select("select * from projects inner join projectTags on projects.id=projectTags.ProjectId")
+    @Select("select title, description, CreateTime, Url, ProjectId, Tag from projects inner join projectTags on projects.id=projectTags.ProjectId")
     List<Project> Projects();
 
-    @Select("select * from projects  inner join projectTags on projects.id=projectTags.ProjectId where projects.id=#{id}")
+    @Select("select title, description, CreateTime,Url, ProjectId, Tag from projects  inner join projectTags on projects.id=projectTags.ProjectId where projects.id=#{id}")
     Project read(int id);
 
     @Delete("delete from projects where id=#{id}")
@@ -26,4 +26,7 @@ public interface Projectmapper {
 
     @Delete("delete from projectTags where ProjectId=#{id}")
     void deleteTags(int id);
+
+    @Select("select Foto from projects where id=#{id}")
+    void foto(int id);
 }
