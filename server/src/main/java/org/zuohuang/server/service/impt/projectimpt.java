@@ -10,6 +10,8 @@ import org.zuohuang.server.pojo.DTO.Project;
 import org.zuohuang.server.pojo.DTO.Result;
 import org.zuohuang.server.service.Projectservice;
 
+import java.util.List;
+
 @Service
 @Slf4j
 @Component
@@ -31,6 +33,21 @@ public class projectimpt implements Projectservice {
 
     @Override
     public Result Projects() {
+        log.info("get all projects");
         return Result.success(projectmapper.Projects());
+    }
+
+    @Override
+    public Project read(int id) {
+        log.info("read a project by id " + id);
+        return projectmapper.read(id);
+    }
+
+    @Override
+    @Transactional
+    public void Delete(int id) {
+        projectmapper.deleteTags(id);
+        projectmapper.deleteProject(id);
+        log.info("deleted project by id " + id);
     }
 }

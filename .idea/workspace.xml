@@ -4,30 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f888482d-9202-44ca-8ade-16dc7d05e66a" name="Changes" comment="dockerfile">
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/mapper/Projectmapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/pojo/DTO/Project.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/Projectservice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/projectimpt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+    <list default="true" id="f888482d-9202-44ca-8ade-16dc7d05e66a" name="Changes" comment="basic project feature">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1dc26a4a-a194-44e7-a635-f62bb517ddee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1dc26a4a-a194-44e7-a635-f62bb517ddee.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/docs/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/server/docs/import.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Admincontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Admincontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Logincontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Logincontroller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Projectcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Projectcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/dao/Adminmapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/mapper/Adminmapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/dao/Loginmapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/mapper/Loginmapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/exception/Exceptionmanager.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/exception/Exceptionmanager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/interceptor/interceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/interceptor/interceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/pojo/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/pojo/DTO/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/pojo/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/pojo/DTO/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/Adminservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/Adminservice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/Loginservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/Loginservice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/Adminimpt.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/Adminimpt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/Loginimpt.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/Loginimpt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/mapper/Projectmapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/mapper/Projectmapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/Projectservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/Projectservice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/projectimpt.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/projectimpt.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +125,7 @@
       <workItem from="1710078998321" duration="13736000" />
       <workItem from="1710097498487" duration="649000" />
       <workItem from="1710318730604" duration="1868000" />
-      <workItem from="1710320722004" duration="5732000" />
+      <workItem from="1710320722004" duration="7665000" />
     </task>
     <task id="LOCAL-00001" summary="admin apis">
       <option name="closed" value="true" />
@@ -223,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710097543969</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="basic project feature">
+      <option name="closed" value="true" />
+      <created>1710327209566</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1710327209566</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +228,8 @@
     <MESSAGE value="add basic aop for logs" />
     <MESSAGE value="login system" />
     <MESSAGE value="dockerfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="dockerfile" />
+    <MESSAGE value="basic project feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic project feature" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

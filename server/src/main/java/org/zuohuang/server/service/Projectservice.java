@@ -7,4 +7,8 @@ public interface Projectservice {
     void add(Project project);
 
     Result Projects();
+
+    Project read(int id);
+
+    void Delete(int id);
 }

@@ -22,26 +22,24 @@ public class Projectcontroller {
         return Result.success();
     }
 
-    @GetMapping("/")
+    @GetMapping("/Allprojects")
     public Result Projects() {
         return projectService.Projects();
-
     }
 
     @GetMapping("/")
-    public Result read() {
-        return projectService.Projects();
+    public Result read(int id) {
+        return Result.success(projectService.read(id));
     }
 
     @PutMapping("/")
     public Result edit() {
         return projectService.Projects();
-
     }
 
     @DeleteMapping("/")
-    public Result delete() {
-        return projectService.Projects();
-
+    public Result delete(int id) {
+        projectService.Delete(id);
+        return Result.success("success deleted by id " + id);
     }
 }
