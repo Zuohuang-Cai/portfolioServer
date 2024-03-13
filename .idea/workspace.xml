@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f888482d-9202-44ca-8ade-16dc7d05e66a" name="Changes" comment="basic project feature">
+    <list default="true" id="f888482d-9202-44ca-8ade-16dc7d05e66a" name="Changes" comment="bytes probleem">
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/1dc26a4a-a194-44e7-a635-f62bb517ddee.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/1dc26a4a-a194-44e7-a635-f62bb517ddee.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Projectcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/controllers/Projectcontroller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/mapper/Projectmapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/mapper/Projectmapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/pojo/DTO/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/pojo/DTO/Project.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/Projectservice.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/Projectservice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/projectimpt.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/org/zuohuang/server/service/impt/projectimpt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +127,8 @@
       <workItem from="1710318730604" duration="1868000" />
       <workItem from="1710320722004" duration="8160000" />
       <workItem from="1710338049920" duration="1342000" />
-      <workItem from="1710339571769" duration="2318000" />
+      <workItem from="1710339571769" duration="2474000" />
+      <workItem from="1710362889905" duration="4304000" />
     </task>
     <task id="LOCAL-00001" summary="admin apis">
       <option name="closed" value="true" />
@@ -229,7 +226,23 @@
       <option name="project" value="LOCAL" />
       <updated>1710329103549</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="bytes probleem">
+      <option name="closed" value="true" />
+      <created>1710341979321</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1710341979321</updated>
+    </task>
+    <task id="LOCAL-00014" summary="bytes probleem">
+      <option name="closed" value="true" />
+      <created>1710342000024</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1710342000024</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +256,8 @@
     <MESSAGE value="login system" />
     <MESSAGE value="dockerfile" />
     <MESSAGE value="basic project feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic project feature" />
+    <MESSAGE value="bytes probleem" />
+    <option name="LAST_COMMIT_MESSAGE" value="bytes probleem" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

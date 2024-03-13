@@ -5,10 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 import org.zuohuang.server.mapper.Projectmapper;
 import org.zuohuang.server.pojo.DTO.Project;
 import org.zuohuang.server.pojo.DTO.Result;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.nio.ByteBuffer;
 import java.sql.Blob;
 import java.sql.SQLException;
 import java.util.List;
@@ -53,10 +57,9 @@ public class projectimpt implements org.zuohuang.server.service.Projectservice {
     }
 
     @Override
-    public void foto(int id) throws SQLException {
-
-
-        System.out.println(projectmapper.foto(id).size());
+    public MultipartFile foto(Project project) throws SQLException {
+        project.setFotobyte(projectmapper.foto(project).getFotobyte());
+        return projectmapper.foto(project).getFoto();
     }
 
     @Override

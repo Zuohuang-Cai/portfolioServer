@@ -1,11 +1,14 @@
 package org.zuohuang.server.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.zuohuang.server.pojo.DTO.Project;
 import org.zuohuang.server.pojo.DTO.Result;
 import org.zuohuang.server.service.Projectservice;
 
+import java.io.IOException;
+import java.nio.ByteBuffer;
 import java.sql.SQLException;
 
 @RestController
@@ -44,8 +47,13 @@ public class Projectcontroller {
         projectService.Delete(id);
         return Result.success("success deleted by id " + id);
     }
+
     @GetMapping("/foto")
-    public void foto(int id)throws SQLException {
-        projectService.foto(id);
+    public ResponseEntity<byte[]> foto(Project project) throws SQLException, IOException {
+        byte[] fotoData = projectService.foto(project).getBytes();
+        return ResponseEntity
+                .ok()
+                .header("Content-Type", "application/octet-stream")
+                .body(fotoData);
     }
 }

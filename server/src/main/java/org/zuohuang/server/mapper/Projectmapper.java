@@ -10,7 +10,7 @@ import java.util.List;
 
 @Mapper
 public interface Projectmapper {
-    @Insert("insert into projects(title,description,Foto,Url) values(#{Title},#{Description},#{Foto},#{Url})")
+    @Insert("insert into projects(title,description,Foto,Url) values(#{Title},#{Description},#{Fotobyte},#{Url})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     void add(Project project);
 
@@ -30,5 +30,5 @@ public interface Projectmapper {
     void deleteTags(int id);
 
     @Select("select Foto from projects where id=#{id}")
-    List<Byte> foto(int id) throws SQLException;
+    Project foto(Project project) throws SQLException;
 }

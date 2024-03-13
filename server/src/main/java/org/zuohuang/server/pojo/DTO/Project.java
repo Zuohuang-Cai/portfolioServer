@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Date;
 
@@ -18,5 +19,6 @@ public class Project {
     private String Description;
     private String Url;
     private String Tag;
-    private byte[] Foto;
+    private MultipartFile Foto;
+    private byte[] Fotobyte;
 }
