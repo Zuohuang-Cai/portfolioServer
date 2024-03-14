@@ -37,8 +37,9 @@ public class Loginimpt implements Loginservice {
     @Override
     public String login(Admin admin) {
         HashMap<String, Object> map = new HashMap<>();
-        map.put("name", admin.getUsername());
         if (loginmapper.login(admin) != null) {
+            map.put("name", admin.getUsername());
+            map.put("id", loginmapper.login(admin).getId());
             return Jwts.builder()
                     .claims(map)
                     .signWith(key)
@@ -66,6 +67,18 @@ public class Loginimpt implements Loginservice {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    @Override
+    public HashMap<String, Object> getClaims(String token) {
+        HashMap<String, Object> claimsMap = new HashMap<>();
+        Claims claims = Jwts.parser()
+                .setSigningKey(key)
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
+        claimsMap.putAll(claims);
+        return claimsMap;
     }
 
     @Override

@@ -12,6 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Component
 public class Admin {
+    private int id;
     private String username;
     private String password;
     private Date CreateTime;

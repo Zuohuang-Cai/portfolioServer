@@ -11,10 +11,10 @@ create table admins
 );
 create table logs
 (
-    admin_id   int                       not null,
-    type       char(10)                  not null,
-    CreateTime DATE DEFAULT CURRENT_DATE not null,
-    info       text                      not null,
+    admin_id   int      not null,
+    type       char(10) not null,
+    CreateTime DATE DEFAULT CURRENT_DATE,
+    info       text     not null,
     foreign key (admin_id) references admins (id)
 );
 create table projects

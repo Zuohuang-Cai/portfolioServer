@@ -41,8 +41,9 @@ public class Projectcontroller {
     }
 
     @PutMapping("/")
-    public Result edit() {
-        return projectService.Projects();
+    public Result edit(Project project) {
+        projectService.update(project);
+        return Result.success();
     }
 
     @DeleteMapping("/")

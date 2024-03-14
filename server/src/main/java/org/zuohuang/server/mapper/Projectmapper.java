@@ -31,4 +31,7 @@ public interface Projectmapper {
 
     @Select("select Foto from projects where id=#{id}")
     Project foto(Project project) throws SQLException;
+
+    @Update("update projects set title=#{Title}, description=#{Description}, Foto=#{Foto}, Url=#{Url} where id=#{id}")
+    void update(Project project);
 }

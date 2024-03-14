@@ -64,6 +64,7 @@ public class projectimpt implements org.zuohuang.server.service.Projectservice {
 
     @Override
     public void update(Project project) {
-
+        projectmapper.update(project);
+        log.info("updated project by id " + project.getId());
     }
 }
