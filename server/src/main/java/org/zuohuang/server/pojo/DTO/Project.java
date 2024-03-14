@@ -19,6 +19,6 @@ public class Project {
     private String Description;
     private String Url;
     private String Tag;
-    private MultipartFile Foto;
-    private byte[] Fotobyte;
+    private byte[] Foto;
+    private MultipartFile Fotofile;
 }

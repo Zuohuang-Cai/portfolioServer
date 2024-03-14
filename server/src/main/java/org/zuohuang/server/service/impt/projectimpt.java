@@ -30,7 +30,8 @@ public class projectimpt implements org.zuohuang.server.service.Projectservice {
 
     @Override
     @Transactional
-    public void add(Project project) {
+    public void add(Project project) throws IOException {
+        project.setFoto(project.getFotofile().getBytes());
         projectmapper.add(project);
         projectmapper.addTags(project);
         log.info("success add project");
@@ -57,8 +58,7 @@ public class projectimpt implements org.zuohuang.server.service.Projectservice {
     }
 
     @Override
-    public MultipartFile foto(Project project) throws SQLException {
-        project.setFotobyte(projectmapper.foto(project).getFotobyte());
+    public byte[] foto(Project project) throws SQLException {
         return projectmapper.foto(project).getFoto();
     }
 

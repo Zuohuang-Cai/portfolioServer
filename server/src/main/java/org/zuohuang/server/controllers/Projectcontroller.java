@@ -1,6 +1,8 @@
 package org.zuohuang.server.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.zuohuang.server.pojo.DTO.Project;
@@ -13,6 +15,7 @@ import java.sql.SQLException;
 
 @RestController
 @RequestMapping("/project")
+@CrossOrigin(origins = "*")
 public class Projectcontroller {
     private final Projectservice projectService;
 
@@ -22,7 +25,7 @@ public class Projectcontroller {
     }
 
     @PostMapping("/")
-    public Result add(Project project) {
+    public Result add(Project project) throws IOException {
         projectService.add(project);
         return Result.success();
     }
@@ -49,11 +52,12 @@ public class Projectcontroller {
     }
 
     @GetMapping("/foto")
-    public ResponseEntity<byte[]> foto(Project project) throws SQLException, IOException {
-        byte[] fotoData = projectService.foto(project).getBytes();
+    public ResponseEntity<ByteArrayResource> foto(Project project) throws SQLException, IOException {
+        byte[] fotoData = projectService.foto(project);
+        ByteArrayResource resource = new ByteArrayResource(fotoData);
         return ResponseEntity
                 .ok()
-                .header("Content-Type", "application/octet-stream")
-                .body(fotoData);
+                .contentType(MediaType.parseMediaType("image/jpeg"))
+                .body(resource);
     }
 }

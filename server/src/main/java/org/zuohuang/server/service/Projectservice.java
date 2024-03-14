@@ -9,7 +9,7 @@ import java.nio.ByteBuffer;
 import java.sql.SQLException;
 
 public interface Projectservice {
-    void add(Project project);
+    void add(Project project) throws IOException;
 
     Result Projects();
 
@@ -17,7 +17,7 @@ public interface Projectservice {
 
     void Delete(int id);
 
-    MultipartFile foto(Project project) throws SQLException, IOException;
+    byte[] foto(Project project) throws SQLException, IOException;
 
     void update(Project project);
 }

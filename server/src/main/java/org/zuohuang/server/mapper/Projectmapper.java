@@ -10,7 +10,7 @@ import java.util.List;
 
 @Mapper
 public interface Projectmapper {
-    @Insert("insert into projects(title,description,Foto,Url) values(#{Title},#{Description},#{Fotobyte},#{Url})")
+    @Insert("insert into projects(title,description,Foto,Url) values(#{Title},#{Description},#{Foto},#{Url})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     void add(Project project);
 
