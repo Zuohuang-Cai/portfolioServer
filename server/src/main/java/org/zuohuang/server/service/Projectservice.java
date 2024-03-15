@@ -1,6 +1,7 @@
 package org.zuohuang.server.service;
 
 import org.springframework.web.multipart.MultipartFile;
+import org.zuohuang.server.pojo.DTO.Log;
 import org.zuohuang.server.pojo.DTO.Project;
 import org.zuohuang.server.pojo.DTO.Result;
 
@@ -13,9 +14,9 @@ public interface Projectservice {
 
     Result Projects();
 
-    Project read(int id);
+    Project read(Project project);
 
-    void Delete(int id);
+    void Delete(Project project);
 
     byte[] foto(Project project) throws SQLException, IOException;
 

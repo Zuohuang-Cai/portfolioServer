@@ -10,11 +10,13 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
-import org.zuohuang.server.pojo.DTO.Log;
-import org.zuohuang.server.service.Adminservice;
+import org.zuohuang.server.pojo.DTO.Project;
 import org.zuohuang.server.service.Loginservice;
 import org.zuohuang.server.service.Logservice;
+import org.zuohuang.server.service.Projectservice;
+import org.zuohuang.server.utils.Logbuilder;
 
+import java.lang.reflect.Field;
 import java.util.HashMap;
 
 
@@ -25,31 +27,93 @@ public class ProjectLogs {
     private Logservice logservice;
     @Autowired
     private Loginservice loginservice;
+    @Autowired
+    private Projectservice projectservice;
 
     @Pointcut("execution(* org.zuohuang.server.controllers.Projectcontroller.edit(..))")
     public void editLogs() {
     }
 
-    @Before("editLogs()")
-    public void beforeEdit(JoinPoint joinPoint) {
-        Object args[] = joinPoint.getArgs();
+    @Pointcut("execution(* org.zuohuang.server.controllers.Projectcontroller.add(..))")
+    public void addLogs() {
+    }
 
-        for (Object arg : args) {
-            System.out.println("Method argument value: " + arg);
-        }
+    @Pointcut("execution(* org.zuohuang.server.controllers.Projectcontroller.delete(..))")
+    public void deleteLogs() {
+    }
+
+    @Pointcut("execution(* org.zuohuang.server.controllers.Projectcontroller.read(..))")
+    public void readtLogs() {
+    }
+
+    @Before("deleteLogs()")
+    public void beforeDelete(JoinPoint joinPoint) throws NoSuchFieldException, IllegalAccessException {
+        System.out.println("start delete");
+        store(joinPoint, "Delete");
+    }
+
+    @Before("readtLogs()")
+    public void beforeRead(JoinPoint joinPoint) throws NoSuchFieldException, IllegalAccessException {
+        System.out.println("start read");
+        store(joinPoint, "Read");
+    }
+
+    @Before("addLogs()")
+    public void beforeAdd(JoinPoint joinPoint) throws NoSuchFieldException, IllegalAccessException {
+        System.out.println("start add");
+        store(joinPoint, "Add");
+    }
+
+    @Before("editLogs()")
+    public void beforeEdit(JoinPoint joinPoint) throws NoSuchFieldException, IllegalAccessException {
+        System.out.println("start edit");
+        store(joinPoint, "Edit");
+    }
+
+    private void store(JoinPoint joinPoint, String Type) throws NoSuchFieldException, IllegalAccessException {
         HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        HashMap<String, Object> admin = getAdmin(request);
+        Object[] args = joinPoint.getArgs();
+
+        Field field = args[0].getClass().getDeclaredField("id");
+        field.setAccessible(true);
+
+        Project data = new Project();
+        data.setId((long) field.get(args[0]));
+        Project project = projectservice.read(data);
+        if (project.getTitle() == null) {
+            project.setTitle("a project");
+        }
+        Logbuilder logbuilder = new Logbuilder()
+                .setAdminId((int) admin.get("id"))
+                .setInfo(admin.get("name") + " " + Type.toLowerCase() + " " + project.getTitle() + " from " + request.getRemoteAddr())
+                .setType(Type);
+        logservice.editlogs(logbuilder.build());
+    }
+
+    private HashMap<String, Object> getAdmin(HttpServletRequest request) {
         String token = request.getHeader("token");
-        Log log = new Log();
-        HashMap<String, Object> admin = loginservice.getClaims(token);
-        log.setAdmin_id((int) admin.get("id"));
-        log.setType("Edit");
-        log.setInfo(admin.get("name") + " edited the project from" + request.getRemoteAddr());
-        logservice.editlogs(log);
-        loginservice.getClaims(token);
+        return loginservice.getClaims(token);
     }
 
     @After("editLogs()")
     public void afterEdit() {
         log.info("success edited");
     }
+
+    @After("addLogs()")
+    public void afterAdd() {
+        log.info("success added");
+    }
+
+    @After("deleteLogs()")
+    public void afterDelete() {
+        log.info("success deleted");
+    }
+
+    @After("readtLogs()")
+    public void afterRead() {
+        log.info("success read");
+    }
+
 }

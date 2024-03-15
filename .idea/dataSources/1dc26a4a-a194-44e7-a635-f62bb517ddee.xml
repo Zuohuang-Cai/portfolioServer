@@ -1178,7 +1178,7 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
       <CollationName>utf8_bin</CollationName>
     </schema>
     <schema id="327" parent="1" name="portfolioServer">
-      <LastIntrospectionLocalTimestamp>2024-03-13.10:16:55</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2024-03-14.14:46:17</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
     <schema id="328" parent="1" name="springbootdb">
@@ -1321,7 +1321,6 @@ test\\_%|schema||&apos;&apos;||UPDATE|G</Grants>
     <column id="361" parent="342" name="CreateTime">
       <DasType>date|0s</DasType>
       <DefaultExpression>curdate()</DefaultExpression>
-      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
     <column id="362" parent="342" name="info">

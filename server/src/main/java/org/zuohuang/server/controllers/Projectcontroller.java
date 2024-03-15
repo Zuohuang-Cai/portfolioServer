@@ -10,7 +10,6 @@ import org.zuohuang.server.pojo.DTO.Result;
 import org.zuohuang.server.service.Projectservice;
 
 import java.io.IOException;
-import java.nio.ByteBuffer;
 import java.sql.SQLException;
 
 @RestController
@@ -36,8 +35,8 @@ public class Projectcontroller {
     }
 
     @GetMapping("/")
-    public Result read(int id) {
-        return Result.success(projectService.read(id));
+    public Result read(Project project) {
+        return Result.success(projectService.read(project));
     }
 
     @PutMapping("/")
@@ -47,9 +46,9 @@ public class Projectcontroller {
     }
 
     @DeleteMapping("/")
-    public Result delete(int id) {
-        projectService.Delete(id);
-        return Result.success("success deleted by id " + id);
+    public Result delete(Project project) {
+        projectService.Delete(project);
+        return Result.success("success deleted by id " + project.getId());
     }
 
     @GetMapping("/foto")

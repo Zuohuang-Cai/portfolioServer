@@ -8,7 +8,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @EnableAspectJAutoProxy
 public class AopConfig {
     @Bean
-    public ProjectLogs Adminlogs() {
+    public ProjectLogs ProjectLogs() {
         return new ProjectLogs();
     }
 }

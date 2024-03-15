@@ -44,17 +44,17 @@ public class projectimpt implements org.zuohuang.server.service.Projectservice {
     }
 
     @Override
-    public Project read(int id) {
-        log.info("read a project by id " + id);
-        return projectmapper.read(id);
+    public Project read(Project project) {
+        log.info("read a project by id " + project.getId());
+        return projectmapper.read(project);
     }
 
     @Override
     @Transactional
-    public void Delete(int id) {
-        projectmapper.deleteTags(id);
-        projectmapper.deleteProject(id);
-        log.info("deleted project by id " + id);
+    public void Delete(Project project) {
+        projectmapper.deleteTags(project);
+        projectmapper.deleteProject(project);
+        log.info("deleted project by id " + project.getId());
     }
 
     @Override
