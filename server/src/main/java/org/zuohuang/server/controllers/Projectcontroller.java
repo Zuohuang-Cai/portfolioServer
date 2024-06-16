@@ -35,7 +35,7 @@ public class Projectcontroller {
     }
 
     @GetMapping("/")
-    public Result read(Project project) {
+    public Result read(Project project) throws SQLException {
         return Result.success(projectService.read(project));
     }
 

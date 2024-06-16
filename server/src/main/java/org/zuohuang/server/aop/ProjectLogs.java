@@ -75,15 +75,18 @@ public class ProjectLogs {
         HashMap<String, Object> admin = getAdmin(request);
         Object[] args = joinPoint.getArgs();
 
-        Field field = args[0].getClass().getDeclaredField("id");
-        field.setAccessible(true);
+        Field id = args[0].getClass().getDeclaredField("id");
+        id.setAccessible(true);
 
-        Project data = new Project();
-        data.setId((long) field.get(args[0]));
-        Project project = projectservice.read(data);
-        if (project.getTitle() == null) {
-            project.setTitle("a project");
+        Field Title = args[0].getClass().getDeclaredField("Title");
+        Title.setAccessible(true);
+
+        Project project = new Project();
+        project.setId((long) id.get(args[0]));
+        if (project.getId() != 0) {
+            project = projectservice.read(project);
         }
+        project.setTitle((String) Title.get(args[0]));
         Logbuilder logbuilder = new Logbuilder()
                 .setAdminId((int) admin.get("id"))
                 .setInfo(admin.get("name") + " " + Type.toLowerCase() + " " + project.getTitle() + " from " + request.getRemoteAddr())

@@ -13,7 +13,7 @@ import java.util.List;
 public interface Projectmapper {
     @Insert("insert into projects(title,description,Foto,Url) values(#{Title},#{Description},#{Foto},#{Url})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
-    void add(Project project);
+    int add(Project project);
 
     @Insert("insert into projectTags(ProjectId, Tag) values(#{id},#{Tag})")
     void addTags(Project project);

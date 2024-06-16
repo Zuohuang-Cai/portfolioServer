@@ -20,5 +20,5 @@ public class Project {
     private String Url;
     private String Tag;
     private byte[] Foto;
-    private MultipartFile Fotofile;
+    private String Fotofile;
 }
