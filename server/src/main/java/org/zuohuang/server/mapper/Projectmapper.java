@@ -21,7 +21,7 @@ public interface Projectmapper {
     @Select("select title, description, CreateTime, Url, ProjectId, Tag from projects inner join projectTags on projects.id=projectTags.ProjectId")
     List<Project> Projects();
 
-    @Select("select title, description, CreateTime,Url, ProjectId, Tag from projects  inner join projectTags on projects.id=projectTags.ProjectId where projects.id=#{id}")
+    @Select("select projects.id , title, description, CreateTime,Url, ProjectId, Tag from projects  inner join projectTags on projects.id=projectTags.ProjectId where projects.id=#{id}")
     Project read(Project project);
 
     @Delete("delete from projects where id=#{id}")

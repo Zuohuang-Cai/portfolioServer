@@ -14,6 +14,13 @@ public class config implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new interceptor(loginservice)).addPathPatterns("/**")
-                .excludePathPatterns("/login/**");
+                .excludePathPatterns("/login/**",
+                        "/swagger-ui.html",
+                        "/swagger-ui/**",
+                        "/swagger-resources/**",
+                        "/webjars/**",
+                        "/v3/api-docs/**",
+                        "/v3/api-docs.yaml",
+                        "/v3/api-docs.json");
     }
 }
